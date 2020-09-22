@@ -29,6 +29,9 @@
             <article id="E0500">
                 <description>Elk</description>
             </article>
+             <product>
+            	<name>IPhone</name>
+            </product>
             <quantity>50</quantity>
         </orderline>
         <orderline>

@@ -29,6 +29,9 @@
             <article id="C0003">
                 <description>Camel</description>
             </article>
+             <product>
+            	<name>IPhone</name>
+            </product>
             <!-- we all love Camels, don't we ;) ? -->
             <quantity>100</quantity>
         </orderline>
@@ -36,6 +39,9 @@
             <article id="C0333">
                 <description>Crocodile</description>
             </article>
+             <product>
+            	<name>Realme</name>
+            </product>
             <quantity>1</quantity>
         </orderline>
     </orderlines>

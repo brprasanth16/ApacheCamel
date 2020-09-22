@@ -29,12 +29,18 @@
             <article id="A0001">
                 <description>Aardvark</description>
             </article>
+            <product>
+            	<name>IPhone</name>
+            </product>
             <quantity>1</quantity>
         </orderline>
         <orderline>
             <article id="A0011">
                 <description>Alpaca</description>
             </article>
+            <product>
+            	<name>OnePlus</name>
+            </product>
             <quantity>10</quantity>
         </orderline>
     </orderlines>

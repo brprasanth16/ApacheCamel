@@ -29,12 +29,19 @@
             <article id="B0002">
                 <description>Badger</description>
             </article>
+             <product>
+            	<name>PantryItems</name>
+            </product>
             <quantity>2</quantity>
         </orderline>
         <orderline>
             <article id="B0202">
                 <description>Bee</description>
             </article>
+            
+             <product>
+            	<name>Gadgets</name>
+            </product>
             <quantity>200</quantity>
         </orderline>
     </orderlines>

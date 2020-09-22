@@ -29,6 +29,9 @@
             <article id="D0040">
                 <description>Dinosaur</description>
             </article>
+             <product>
+            	<name>IPad</name>
+            </product>
             <quantity>4</quantity>
         </orderline>
         <orderline>

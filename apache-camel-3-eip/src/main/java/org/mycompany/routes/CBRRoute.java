@@ -4,7 +4,7 @@ import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 
-@Component
+//@Component
 public class CBRRoute extends RouteBuilder {
 
 	@Override
@@ -44,3 +44,92 @@ public class CBRRoute extends RouteBuilder {
 	}
 
 }
+
+// Zookeeper
+
+
+
+
+
+
+
+
+
+
+
+// Creating Real Time Data Streams
+
+// Process Real Time Data Streams
+
+
+// ElectronicMeterIOTEnabled  --> IOTHub  ------>   Apache Kafka  ---> ApacheCamel --> ProcessRealtimeData ---> SendSMS
+
+
+
+//ElectronicMeterIOTEnabled
+
+//ElectronicMeterIOTEnabled
+
+
+
+// Asynchronous Communication
+
+
+// Message Publisher (IOTHub)  ---->   MessageBroker    <------ MessageConsumer (ApacheCamel)
+
+// Apache Kafka Evolved
+// ServerSoftware Broker
+// ClientAPI (JavaLibrary) 1. ProducerAPI 2. ConsumerAPI
+// kafkaConnect
+// KafkaStreams
+// KSQL
+
+// Five Major Components
+// 1.kafka Broker
+// 2. KafkaClient
+// 3. KafkaConnect
+// 4. KafkaStreams
+// 5. KSQl (Commercial Version Which is Managed By Confluent)
+
+
+// WebApps --> ApacheKafka <--- IOT
+
+
+// KafkaConnect is a InvoicingApplication Backed With Database --> {SourceConnector KafkaConnect} --> KafkaCluster <-- {SinkConnector KafkaConnect} <--- Finance | Analytics 
+
+
+// KafkaStream is a JavaLibrary all the input data is streamed inside a Kafkatopic 
+
+// ParallelProcessing,scalibility,faulttolerance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
