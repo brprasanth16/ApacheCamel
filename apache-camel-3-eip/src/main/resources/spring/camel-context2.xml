@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
+    <routeContext id="camel1" xmlns="http://camel.apache.org/schema/spring">
+        <route id="simple-route1" startupOrder="2">
+          <!-- Consumer Endpoint -->
+            <from id="route-timer1" uri="timer://foo1?period=1h15m36s"/>
+            <setBody id="route-setBody1">
+                <simple>Hello World from camel-context2.xml</simple>
+            </setBody>
+            <log id="route-log1" message=">>> ${body}"/>
+        </route>
+    </routeContext>
+</beans>
+
+<!--  from (uri) -> processor -> to(uri)-> InMessage
+										<- OutMessage
+<soap:Envelope>
+<soapenv:Header>
+</soapenv:Header>
+<soapenv:Body>
+</soapenv:Body>
+<soapenv:Attachment>
+</soapenv:Attachment>
+<soap:Envelope>
+
+
+Exchange Object Consists
+
+Camel Message
+
+Header 
+Body
+Attachment
+
+InMessage
+
+
+
+InOnly
+
+
+InOut
+
+
+InOptionalOut
+
+
+OutOnly
+
+URI(file://)
+
+ Scheme:contextPath[?queryop†ions]
+ 
+ 
+ // Consumer Endpoint appears at the start of The Route
+ 
+ from() DSl Command
+
+// Producer Endpoint
+ to() DSL Command
+
+from ("SOURCEURL")
+.process("Processor")
+.to("kafka:someTopic")
+
+// Camel Processor
+
+ aggregate()
+ aop()
+ choice()
+ filter()
+ inOnly()
+ inOut()
+ multicast()
+ recipientList()
+ removeHeader()
+ setBody()
+ setHeader()
+ sort()
+ split()
+ to()
+ threads()
+ wireTap()
+ 
+ 
+ command01;
+ command02;
+ command03;
+ DSL 
+ command01().process().command02().command03()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ -->
+
+

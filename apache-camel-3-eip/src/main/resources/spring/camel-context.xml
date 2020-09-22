@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-       http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
-
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
+    <!-- <import resource="camel-context2.xml"/>
+    <import resource="camel-context3.xml"/> -->
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-        <route id="simple-route">
+    
+    
+    
+    <route id="cbr">
+    
+    <from id="_from1" uri="file:data/cbr/input?noop=true"/>
+    <log id="_log1" message="Receiving Order ${file:name}"/>
+    
+    <choice id="_choice1">
+    <when id="_whenUS">
+    <xpath id="_xpath1">/order/customer/country='US'</xpath>
+    <log id="_log21" message="Receiving Order ${file:name} to US1"/>
+    <to id="_toUS1" uri="file:output/cbr/us1" />
+    </when>
+    
+    <when id="_whenUK">
+    <xpath id="_xpath2">/order/customer/country='UK'</xpath>
+    <log id="_log22" message="Receiving Order ${file:name} to UK1"/>
+    <to id="_toUK1" uri="file:output/cbr/uk1" />
+    </when>
+    
+    
+    <otherwise>
+    <log id="_log23" message="Receiving Order ${file:name} toothers1"/>
+    <to id="_toothers1" uri="file:output/cbr/others1" />
+    </otherwise>
+    
+    </choice>
+    
+    </route>
+      <!--   <routeContextRef ref="camel2"/>
+        <routeContextRef ref="camel1"/> -->
+       
+      <!--   <route id="simple-route" startupOrder="3" autoStartup="false">
             <from id="route-timer" uri="timer://foo?period=1000"/>
-            <setBody id="route-setBody"><simple>Hello World from camel-context.xml</simple></setBody>
+            <setBody id="route-setBody">
+                <simple>Hello World from camel-context.xml</simple>
+            </setBody>
             <log id="route-log" message=">>> ${body}"/>
-        </route>
+        </route> -->
+        
+        
+        
+        
+        <!--   <route id="simple-route1">
+            <from id="route-timer1" uri="timer://foo1?period=2000"/>
+            <setBody id="route-setBody1">
+                <simple>Hello World from camel-context2.xml</simple>
+            </setBody>
+            <log id="route-log1" message=">>> ${body}"/>
+        </route> -->
     </camelContext>
 </beans>

@@ -1,130 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <!--Get required dependencies from a parent-->
-   <parent>
-      <groupId>org.apache.camel</groupId>
-      <artifactId>camel-dependencies</artifactId>
-      <version>3.3.0</version>
-   </parent>
-   <artifactId>spring-boot-camel</artifactId>
-   <name>spring-boot-camel</name>
-   <description>Spring Boot Camel integration tutorial</description>
-   <properties>
-      <spring-boot-version>2.2.7.RELEASE</spring-boot-version>
-      <run.profiles>dev</run.profiles>
-   </properties>
-   <dependencyManagement>
-      <dependencies>
-         <!--Import as a pom to let spring-boot to manage spring-boot dependencies version -->
-         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
-            <version>${spring-boot-version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-         </dependency>
-         <!--Import as a pom to let camel manage camel-spring-boot dependencies version-->
-         <dependency>
-            <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-spring-boot-dependencies</artifactId>
-            <version>3.3.0</version>
-            <type>pom</type>
-            <scope>import</scope>
-         </dependency>
-      </dependencies>
-   </dependencyManagement>
-   <dependencies>
-      <!--Spring boot dependencies to enable REST, JPA and Core features-->
-      <dependency>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-web</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-     <!--  <dependency>
-  <groupId>org.apache.camel.springboot</groupId>
-  <artifactId>camel-kafka-starter</artifactId>
-  
-  use the same version as your Camel core version
-</dependency> -->
-      <dependency>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-data-jpa</artifactId>
-      </dependency>
-      <!--Camel Spring Boot Dependencies to enable REST, JSON, SWAGGER, JPA features-->
-      <dependency>
-         <groupId>org.apache.camel.springboot</groupId>
-         <artifactId>camel-spring-boot-starter</artifactId>
-      </dependency>
-     <dependency>
-      <groupId>io.hawt</groupId>
-      <artifactId>hawtio-springboot</artifactId>
-      <version>2.10.2</version>
-    </dependency>
-      
-     <dependency>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-management</artifactId>
-        
-   </dependency>
-      <dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-kafka</artifactId>
-    
-    <!-- use the same version as your Camel core version -->
-</dependency>
-      <dependency>
-         <groupId>org.apache.camel.springboot</groupId>
-         <artifactId>camel-servlet-starter</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.camel.springboot</groupId>
-         <artifactId>camel-jackson-starter</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.camel.springboot</groupId>
-         <artifactId>camel-swagger-java-starter</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.camel.springboot</groupId>
-         <artifactId>camel-jpa-starter</artifactId>
-      </dependency>
-      <!--In memory database-->
-      <dependency>
-         <groupId>com.h2database</groupId>
-         <artifactId>h2</artifactId>
-         <scope>runtime</scope>
-      </dependency>
-      <!--Spring boot testing-->
-      <dependency>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-test</artifactId>
-         <scope>test</scope>
-      </dependency>
-   </dependencies>
-   <build>
-      <plugins>
-      
-         <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>${spring-boot-version}</version>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>repackage</goal>
-                  </goals>
-               </execution>
-            </executions>
-         </plugin>
-      </plugins>
-   </build>
-</project>
-
-<!-- <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
@@ -148,13 +22,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-spring-boot-dependencies</artifactId>
-      <version>3.1.0</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
@@ -166,16 +33,10 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    
-    <dependency>
-    <groupId>org.apache.camel.springboot</groupId>
-    <artifactId>camel-COMPONENT-starter</artifactId>
-  </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring-boot-starter</artifactId>
-          
-      
+      <version>2.23.2.fuse-770010-redhat-00001</version>
     </dependency>
   </dependencies>
   <repositories>
@@ -299,4 +160,3 @@
     </profile>
   </profiles>
 </project>
- -->

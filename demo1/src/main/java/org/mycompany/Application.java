@@ -23,12 +23,10 @@ import org.springframework.context.annotation.ImportResource;
  * A spring-boot application that includes a Camel route builder to setup the Camel routes
  */
 
-// {@ComponentScan,@EnableAutoConfiguration,@Configuration}
-
-
-// Starts U r CamelContext, CamelComponents, Routes are initialised
 @SpringBootApplication
-//@ImportResource({"classpath:spring/camel-context.xml"})
+
+// 
+@ImportResource({"classpath:spring/camel-context.xml"})
 public class Application {
 
     // must have a main method spring-boot can run
@@ -37,11 +35,3 @@ public class Application {
     }
 
 }
-
-
-// from ("timer://foo")
-// from ("file://")
-
-
-
-// from ("component://options")

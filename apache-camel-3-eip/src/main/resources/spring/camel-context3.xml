@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
+    <routeContext id="camel2" xmlns="http://camel.apache.org/schema/spring">
+        <route id="simple-route2" startupOrder="1">
+            <from id="route-timer2" uri="timer://foo1?period=2000"/>
+            <setBody id="route-setBody2">
+                <simple>Hello World from camel-context3.xml</simple>
+            </setBody>
+            <log id="route-log2" message=">>> ${body}"/>
+        </route>
+    </routeContext>
+</beans>
