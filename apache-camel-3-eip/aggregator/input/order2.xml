@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orders>
+
+
+<order type="homeappliances">
+<customer>
+<name>Name3</name>
+</customer>
+<price>289456.4</price>
+<description>SofaCumbed</description>
+<date>2020-09-21</date>
+</order>
+
+</orders>

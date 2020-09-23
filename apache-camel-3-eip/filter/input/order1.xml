@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orders>
+<order type="gadgets">
+<customer id="4">
+<name>Name1</name>
+</customer>
+<price>789456.4</price>
+<description>Iphone11</description>
+<date>2020-09-23</date>
+</order>
+
+
+
+
+</orders>

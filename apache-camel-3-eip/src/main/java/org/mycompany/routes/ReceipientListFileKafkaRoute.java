@@ -8,12 +8,19 @@ import org.apache.camel.spi.ThreadPoolProfile;
 import org.springframework.stereotype.Component;
 
 
-@Component
+//@Component
 public class ReceipientListFileKafkaRoute extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
 		// TODO Auto-generated method stub
+		
+		// EIP
+		
+		// Message pattern 
+		// Message Channel Pattern
+		// Message Endpoint  Pattern
+		// Pipes & Filters patterns
 		
 		// Simple Plain English
 		// JavaScript,Python,Ruby

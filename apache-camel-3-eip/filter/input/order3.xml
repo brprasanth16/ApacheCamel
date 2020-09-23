@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orders>
+
+
+<order type="pantry">
+<customer id="7">
+<name>Name5</name>
+</customer>
+
+<price>9456.4</price>
+<description>Rice,Wheat</description>
+<date>2020-09-21</date>
+</order>
+
+</orders>
