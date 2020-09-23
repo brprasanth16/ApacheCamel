@@ -75,6 +75,14 @@
     <artifactId>camel-kafka</artifactId>
     
     <!-- use the same version as your Camel core version -->
+
+
+</dependency>
+      <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-quartz</artifactId>
+    
+    <!-- use the same version as your Camel core version -->
 </dependency>
       <dependency>
          <groupId>org.apache.camel.springboot</groupId>

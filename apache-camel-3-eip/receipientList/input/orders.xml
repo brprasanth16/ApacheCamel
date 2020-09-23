@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orders>
+<order type="gadgets">
+<id>4</id>
+<name>Name1</name>
+<price>789456.4</price>
+<description>Iphone11</description>
+<date>2020-09-23</date>
+</order>
+<order type="pantry">
+<id>2</id>
+<name>Name2</name>
+<price>7856.4</price>
+<description>Rice,Daal</description>
+<date>2020-09-22</date>
+</order>
+
+<order type="homeappliances">
+<id>7</id>
+<name>Name3</name>
+<price>289456.4</price>
+<description>SofaCumbed</description>
+<date>2020-09-21</date>
+</order>
+
+</orders>
